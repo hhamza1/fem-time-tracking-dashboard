@@ -1,0 +1,51 @@
+.App {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 24px;
+}
+
+.subtext {
+    font-weight: 400;
+    font-size: 15px;
+    color: hsla(236, 100%, 87%, 1);
+}
+
+.text {
+    font-weight: 300;
+    font-size: 24px;
+}
+
+.container {
+    background-color: hsla(246, 80%, 60%, 1);
+    display: flex;
+    column-gap: 20px;
+    padding: 35px 32px;
+    border-radius: 15px;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sorting-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 24px 0;
+}
+
+.sorting-btn {
+    border: 0;
+    background: transparent;
+    font-size: inherit;
+    font-family: inherit;
+    color: hsla(235, 45%, 61%, 1);
+    transition: all .3s ease-in-out;
+
+    &:hover {
+        color: #fff;
+    }
+
+}
