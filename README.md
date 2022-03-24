@@ -28,10 +28,14 @@ Users should be able to:
 
 ### Screenshot
 
+#### Mobile Version
+[Mobile Version](./screenshots/mobile-version.gif)
+
+
 ### Links
 
 - Solution URL: [Github Repo](https://github.com/hhamza1/fem-time-tracking-dashboard)
-- Live Site URL: [Live Preview - TBD](TBD)
+- Live Site URL: [Live Preview - TBD](https://scintillating-stardust-5e1e20.netlify.app/)
 
 ## My process
 
