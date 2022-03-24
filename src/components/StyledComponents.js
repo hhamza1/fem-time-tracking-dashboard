@@ -42,6 +42,7 @@ export const ReportSorter = styled.div`
     background-color: ${neutral.darkBlue};
     border-radius: 15px;
     --webkit-filter: drop-shadow(0px 4px 4px rgba(0,0,0, .25));
+    width: 100%;
 
 `;
 
@@ -51,6 +52,7 @@ export const ImgContainer = styled.div`
     height: 64px;
     background-image: url(${props => props.bgImg});
     background-size: contain;
+    background-repeat: no-repeat;
     border-radius: 50%;
     border: 3px solid #fff;
 
