@@ -29,7 +29,7 @@ Users should be able to:
 ### Screenshot
 
 #### Mobile Version
-[Mobile Version](./screenshots/mobile-version.gif)
+![Mobile Version](./screenshots/mobile-version.gif)
 
 
 ### Links
