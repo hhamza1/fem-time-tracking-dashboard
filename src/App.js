@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import { ReportSorter , ImgContainer, ReportContainer} from './components/StyledComponents';
 
@@ -17,6 +17,8 @@ import data from './data/data.json';
 import './App.scss';
 
 function App() {
+
+  const [timeframe, setTimeFrame] = useState('weekly');
 
   const handleIcon = (icon) =>{
     switch(icon) {
@@ -37,6 +39,11 @@ function App() {
     }
   }
 
+  const getTimeFrame = e => {
+    const frame = e.target.getAttribute('data-timeframe');
+    setTimeFrame(frame);
+  }
+
 
 
 
@@ -54,27 +61,32 @@ function App() {
           </div>
         </div>
         <div className='sorting-container'>
-            <button className='sorting-btn'>Daily</button>
-            <button className='sorting-btn'>Weekly</button>
-            <button className='sorting-btn'>Monthly</button>
+            <button 
+              className={timeframe === 'daily' ? 'sorting-btn selected' : 'sorting-btn'} 
+              data-timeframe="daily"
+              onClick={(e) => getTimeFrame(e)}>Daily</button>
+            <button className={timeframe === 'weekly' ? 'sorting-btn selected' : 'sorting-btn'}  data-timeframe="weekly" onClick={(e) => getTimeFrame(e)}>Weekly</button>
+            <button className={timeframe === 'monthly' ? 'sorting-btn selected' : 'sorting-btn'}  data-timeframe="monthly" onClick={(e) => getTimeFrame(e)}>Monthly</button>
           </div>
       </ReportSorter>
       {
         data.map((el, index) => {
+          
+
           return (
             <ReportContainer 
-              index={index} 
+              key={index} 
               color={el.title} 
               icon={handleIcon(el.title)}
             >
             <div className="tracking-details">
               <div className='top-section'>
                 <h3>{el.title}</h3>
-                <img src={Ellipsis} alt="test"/>
+                <img src={Ellipsis} alt="More Details"/>
               </div>
               <div className='bottom-section'>
-                <h2>{el.timeframes.weekly.current}hrs</h2>
-                <p>Last Week - {el.timeframes.weekly.previous}hrs</p>
+                <h2>{el.timeframes[timeframe].current}hrs</h2>
+                <p>Last Week - {el.timeframes[timeframe].current} hrs</p>
               </div>
             </div>
             </ReportContainer>

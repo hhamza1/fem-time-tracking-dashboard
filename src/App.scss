@@ -45,11 +45,15 @@
     font-family: inherit;
     color: hsla(235, 45%, 61%, 1);
     transition: all .3s ease-in-out;
+    cursor: pointer;
 
-    &:hover {
+    &:hover,  {
         color: #fff;
     }
+}
 
+.selected {
+    color: #fff;
 }
 
 
@@ -57,6 +61,13 @@
     background-color: hsla(236, 45%, 20%, 1);
     padding: 28px 24px;
     border-radius: 15px;
+
+    transition: all .3s ease-in-out;
+
+    &:hover {
+        background-color: hsla(236, 41%, 34%, 1);
+
+    }
 }
 
 .top-section, .bottom-section {
