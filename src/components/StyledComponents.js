@@ -18,6 +18,26 @@ export const neutral = {
 };
 
 
+const handleColorType = color => {
+    switch (color) {
+      case "Work":
+        return primary.lightRed;
+      case "Play":
+        return primary.softBlue;
+      case "Study":
+        return primary.lightRedStudy;
+      case "Exercise":
+        return primary.limeGreen;
+      case "Social":
+        return primary.violet;
+      case "Self Care":
+        return primary.softOrange;
+      default:
+        return "#fff";
+    }
+  };
+
+
 export const ReportSorter = styled.div`
     background-color: ${neutral.darkBlue};
     border-radius: 15px;
@@ -34,4 +54,18 @@ export const ImgContainer = styled.div`
     border-radius: 50%;
     border: 3px solid #fff;
 
+`;
+
+
+export const ReportContainer = styled.div`
+    background-color : ${({color}) => handleColorType(color)};
+    background-image: url(${props => props.icon});
+    background-position: 95% -5px;
+    background-repeat: no-repeat;
+    width: 100%;
+    border-radius: 17px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 `;
