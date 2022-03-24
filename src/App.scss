@@ -1,5 +1,7 @@
 .App {
     display: flex;
+    flex-direction: column;
+    gap: 24px;
     justify-content: center;
     align-items: center;
     padding: 40px 24px;
@@ -48,4 +50,34 @@
         color: #fff;
     }
 
+}
+
+
+.tracking-details {
+    background-color: hsla(236, 45%, 20%, 1);
+    padding: 28px 24px;
+    border-radius: 15px;
+}
+
+.top-section, .bottom-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3px 0;
+
+    h2 {
+        font-weight: 300;
+        font-weight: 32px;
+    }
+
+    h3 {
+        font-weight: 500;
+        font-weight: 18px;
+    }
+
+    p {
+        color: hsla(236, 100%, 87%, 1);
+        font-weight: 15px;
+    }
 }
